@@ -143,7 +143,7 @@ It will auto heat up if the current temp doesn't reach the target.
 
 
 #set number of  "More" button 
->moreitem_pic_cnt:5
+>moreitem_pic_cnt:6
 
 #edit command for 1~7 "More" button,each command must be separated by semicolon ";"
 >moreitem_button1_cmd:M42 P4 S0;M42 P5 S0;M42 P6 S0;
@@ -156,7 +156,8 @@ It will auto heat up if the current temp doesn't reach the target.
 
 >moreitem_button5_cmd:M42 P4 S0;M42 P5 S0;M42 P6 S255;
 
->moreitem_button6_cmd:G28 Z0;
+#clear EEPROM
+>moreitem_button6_cmd:M502; M500;
 
 >moreitem_button7_cmd:G28;
 
